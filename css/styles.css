@@ -80,7 +80,40 @@ ul {
 .container {
   width: 1158px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding-inline: 15px;
+}
+
+.header > .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 24px;
+  align-items: center;
+}
+
+.header-wrapper > .navigation-links {
+  display: flex;
+  gap: 76px;
+  align-items: center;
+}
+
+.header-wrapper > .navigation-links > .navigation-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.header-wrapper > .address > .contact-links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer > .footer-wrapper {
+  padding-block: 100px;
+  margin-right: auto;
+}
+
+.footer > .footer-wrapper > .footer-text {
+  width: 264px;
+  margin-top: 16px;
 }
 
 .list {
