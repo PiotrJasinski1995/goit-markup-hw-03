@@ -54,14 +54,33 @@ body {
   background-color: var(--color-background);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
+}
+
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .list {
@@ -199,6 +218,7 @@ body {
 
 .section {
   background-color: var(--color-background);
+  padding: 120px 0;
 }
 
 .section.main-page-main-section {
