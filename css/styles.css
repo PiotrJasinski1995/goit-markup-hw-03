@@ -69,26 +69,57 @@ ul {
   border: 0;
 }
 
-.visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
+/* img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
   max-width: 1158px;
   margin: 0 auto;
-  padding-inline: 15px;
+  padding: 0 15px;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .header > .header-wrapper {
   display: flex;
-  justify-content: space-between;
-  padding-block: 24px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -168,9 +199,8 @@ ul {
   display: flex;
   gap: var(--list-item-gap);
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .portfolio-section .portfolio-list {
@@ -201,11 +231,6 @@ ul {
   margin-bottom: 72px;
 }
 
-.section {
-  background-color: var(--color-background);
-  padding-block: 120px;
-}
-
 .section.main-page-main-section {
   background-color: var(--color-main-page-main-section);
   padding-block: 188px;
@@ -231,7 +256,7 @@ ul {
   list-style: none;
 }
 
-.list-item {
+.team-list > .list-item {
   background-color: var(--color-background);
 }
 
@@ -243,7 +268,6 @@ ul {
   line-height: var(--line-height-text);
   letter-spacing: var(--letter-spacing-button);
   text-align: center;
-  padding: 16px 32px;
   border-radius: 4px;
   border: 0;
 }
@@ -252,6 +276,7 @@ ul {
   color: var(--color-order-button-foreground);
   background-color: var(--color-order-button-background);
   display: block;
+  padding: 16px 32px;
   margin: 48px auto 0;
 }
 
@@ -259,6 +284,7 @@ ul {
   color: var(--color-portfolio-filter-button-foreground);
   background-color: var(--color-portfolio-filter-button-background);
   border: 1px solid var(--color-border);
+  padding: 12px 24px;
 }
 
 .btn:hover,
@@ -284,6 +310,7 @@ ul {
 
 .address {
   font-style: normal;
+  margin-left: auto;
 }
 
 .link:hover,
@@ -381,15 +408,12 @@ ul {
 .header {
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border);
+  padding: 24px 0;
 }
 
 .footer {
   background-color: var(--color-footer-background);
-}
-
-.footer > .footer-wrapper {
-  padding-block: 100px;
-  margin-right: auto;
+  padding: 100px 0;
 }
 
 .footer > .footer-wrapper > .footer-text {
